@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 const ProductDetail = async ({ params }: { params: any }) => {
-    const res = await fetch("http://localhost:3000/api/users").then((r) => r.json());
+    const res = await fetch("https://next-js-nine-olive.vercel.app/api/users").then((r) => r.json());
     var data = res;
     console.log(params);
     metadata.description = "Abc";
