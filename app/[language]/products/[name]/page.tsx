@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-
+import users from '../../../../data/users/users.json';
 
 
 
@@ -9,16 +9,14 @@ export const metadata = {
 }
 
 const ProductDetail = async ({ params }: { params: any }) => {
-    const res = await fetch("https://next-js-nine-olive.vercel.app/api/users").then((r) => r.json());
-    var data = res;
-    console.log(params);
+    const res = users;
     metadata.description = "Abc";
     metadata.title = "asdasd";
 
     return (
         <>
             {
-                data.map((res: any) => (
+                res.map((res: any) => (
                     <Fragment>
                         <div>{res.Username} </div>
                     </Fragment>
